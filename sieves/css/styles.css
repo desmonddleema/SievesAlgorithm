@@ -5,7 +5,11 @@ fieldset {
   text-align: center;
   font-size: 20px;
 }
+#demo {
+  margin-top: 5px;
+}
 .flex-container {
+  /* margin-top: 5px; */
   background: indianred;
   padding: 10px;
   border: 2px solid black;
@@ -23,7 +27,7 @@ fieldset {
   text-align: center;
 }
 .buttonClass {
-  margin-top: 10px;
+  margin-top: 5px;
   border: 2px solid black;
   padding: 10px;
   text-align: center;
@@ -42,4 +46,14 @@ button {
 button:hover {
   background: rgb(200, 200, 200);
   cursor: pointer;
+}
+
+#message {
+  position: relative;
+  margin-top: 5px;
+  display: none;
+  text-align: center;
+  background: yellow;
+  padding: 5px;
+  border: 2px solid black;
 }
