@@ -1,7 +1,9 @@
 function generateNumbers() {
     const lower = parseInt(document.getElementById("value1").value);
     const upper = parseInt(document.getElementById("value2").value);
-
+    var number = parseInt(document.getElementById("value3").value);
+    
+    document.getElementById("message").style.display = "none";    
     var text = '<div class="parent">';
     text = '<div class="flex-container">';
     for (let i = lower; i <= upper; i++) {
@@ -9,8 +11,30 @@ function generateNumbers() {
     }
     // text += '</div><div class="buttonClass"><button onClick="even()">Even</button><button onClick="odd()">Odd</button><button onClick="sieve()">Prime</button><button onClick="reset()">Reset</button></div>';
     
-    text += '</div><div class="buttonClass"><button Onclick="sieve()">Prime</button><button onClick="reset()">Reset</button></div>'
+    text += '</div><div class="buttonClass"><button Onclick="sieve()">Prime</button><button Onclick="generateNumbers()">Factors</button><button onClick="reset()">Reset</button></div>'
     document.getElementById("demo").innerHTML = text;
+
+    if(number != 0){
+        var spf = [0]
+        for(let i=lower; i<=number; i++){
+            spf.push(i);
+        }
+        for(let i=2; i<=number; i++){
+            if(spf[i] == i){
+                for(let j=i*i; j<=number; j+=i){
+                    if(spf[j] == j){
+                        spf[j] = i;
+                    }
+                }
+            }
+        }
+    // for(let i=0; i<spf.length; i++) console.log(spf[i]);
+        while(number != 1){
+            var temp = "child" + spf[number];
+            number = number/spf[number];
+            document.getElementById(temp).style.background = "yellow";
+        }
+    }
   }
 function even(){
     const lower = parseInt(document.getElementById("value1").value);
@@ -44,6 +68,10 @@ function reset(){
 function sieve(){
     const lower = parseInt(document.getElementById("value1").value);
     const upper = parseInt(document.getElementById("value2").value);
+    for(let i=lower; i<=upper; i++){
+        var value="child"+i;
+        document.getElementById(value).style.background="wheat";
+    }
     for(let i=2; i<=(upper/4); i++){
         var value1 = i*i;
         var inc = value1/i;
