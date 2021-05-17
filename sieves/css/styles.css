@@ -68,3 +68,9 @@ button:hover {
   padding: 5px;
   border: 2px solid black;
 }
+input {
+  padding: 5px;
+}
+select {
+  padding: 5px;
+}
