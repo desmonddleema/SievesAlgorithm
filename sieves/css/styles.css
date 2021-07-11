@@ -6,6 +6,8 @@ fieldset {
   padding-top: 30px;
   padding-left: 50px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 #demo {
   margin-top: 5px;
@@ -73,4 +75,19 @@ input {
 }
 select {
   padding: 5px;
+}
+
+.label-field {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+.input-field {
+  display: flex;
+  width: 40%;
+}
+.inside-field {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }

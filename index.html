@@ -9,10 +9,48 @@
     <div style="margin: 0px">
       <fieldset id="dark">
         <legend>Sieves Algorithm</legend>
-        <label for="value1">Enter the lower range: </label>
-        <input type="number" name="value1" id="value1" min="1" autofocus />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <label for="value3">Generate prime factors for the number: </label>
+        <div class="inside-field">
+          <div class="label-field">
+            <label for="value1">Enter the lower range: </label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="value1" id="value1" min="1" autofocus />
+          </div>
+        </div>
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+        <div class="inside-field">
+          <div class="label-field">
+            <label for="value2">Enter the upper range: </label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="value2" id="value2" min="1" />
+          </div>
+        </div>
+
+        <div class="inside-field">
+          <div class="label-field">
+            <label for="value4">Theme: </label>
+          </div>
+          <div class="input-field">
+            <select name="value4" id="value4">
+              <option>Light</option>
+              <option>Dark</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="inside-field">
+          <div class="label-field">
+            <label for="value3">Generate prime factors for the number: </label>
+          </div>
+          <div class="input-field">
+            <input type="number" name="value3" id="value3" min="1" />
+          </div>
+        </div>
+
+        <!--start here-->
+        <!-- <label for="value3">Generate prime factors for the number: </label>
         <input type="number" name="value3" id="value3" min="1" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="value4">Theme: </label>
@@ -22,8 +60,13 @@
         </select>
         <br /><br />
         <label for="value2">Enter the upper range: </label>
-        <input type="number" name="value2" id="value2" min="1" />
-        <div style="margin-left: 500px">
+        <input type="number" name="value2" id="value2" min="1" /> -->
+
+        <!-- <div style="margin-left: 500px">
+          <button onclick="generateNumbers()">Submit</button>
+        </div> -->
+
+        <div class="inside-field" style="justify-content: center; width: 80%">
           <button onclick="generateNumbers()">Submit</button>
         </div>
       </fieldset>
