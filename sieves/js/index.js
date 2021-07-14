@@ -1,6 +1,10 @@
 function generateNumbers() {
-    const lower = parseInt(document.getElementById("value1").value);
-    const upper = parseInt(document.getElementById("value2").value);
+    let lower = parseInt(document.getElementById("value1").value);
+    if(lower == 0)
+        lower += 1;
+    let upper = parseInt(document.getElementById("value2").value);
+    if(upper == 0)
+        upper += 1;
     var number = parseInt(document.getElementById("value3").value);
     const theme = document.getElementById("value4").value;
     
@@ -62,8 +66,8 @@ function generateNumbers() {
     }
   }
 function even(){
-    const lower = parseInt(document.getElementById("value1").value);
-    const upper = parseInt(document.getElementById("value2").value);
+    let lower = parseInt(document.getElementById("value1").value);
+    let upper = parseInt(document.getElementById("value2").value);
     for(let i=lower; i<=upper; i++){
         if(i%2 == 0){
             var value="child"+i;
@@ -72,8 +76,8 @@ function even(){
     }
 }
 function odd(){
-    const lower = parseInt(document.getElementById("value1").value);
-    const upper = parseInt(document.getElementById("value2").value);
+    let lower = parseInt(document.getElementById("value1").value);
+    let upper = parseInt(document.getElementById("value2").value);
     for(let i=lower; i<=upper; i++){
         if(i%2 != 0){
             var value="child"+i;
@@ -82,8 +86,12 @@ function odd(){
     }
 }
 function reset(){
-    const lower = parseInt(document.getElementById("value1").value);
-    const upper = parseInt(document.getElementById("value2").value);
+    let lower = parseInt(document.getElementById("value1").value);
+    if(lower == 0)
+        lower += 1;
+    let upper = parseInt(document.getElementById("value2").value);
+    if(upper == 0)
+        upper += 1;
     const theme = document.getElementById("value4").value;
 
     if(theme == "Dark"){
@@ -122,8 +130,12 @@ function reset(){
 
 }
 function sieve(){
-    const lower = parseInt(document.getElementById("value1").value);
-    const upper = parseInt(document.getElementById("value2").value);
+    let lower = parseInt(document.getElementById("value1").value);
+    if(lower == 0)
+        lower += 1;
+    let upper = parseInt(document.getElementById("value2").value);
+    if(upper == 0)
+        upper += 1;
     const theme = document.getElementById("value4").value;
 
     if(theme == "Dark"){
